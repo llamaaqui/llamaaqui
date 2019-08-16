@@ -1,0 +1,73 @@
+html{
+	font-family: Century Gothic;
+}
+
+footer{
+	font-weight: bold;
+}
+
+#imgfooter{
+	max-width: 04%;
+	margin-left: 50px;
+	margin-top: 10px;
+	/*background-color: white;*/
+	padding: 10px;
+}
+
+#formulario_cadastro {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+	width: 300px;
+	background-color: lightgray;
+	padding: 30px;
+	border: 0.5px solid black;
+	border-radius: 15px;
+	box-shadow: -10px 10px 50px lightgray;
+}
+
+.input_form {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 95%;
+	height: 20px;
+	outline: none;
+	border-radius: 8px;
+	border: 0.5px solid black;
+	padding: 6px;
+}
+
+.input_radio {
+	width: 25px !important;
+	padding: 5px
+}
+
+label {
+	font-weight: 900;
+}
+
+.select {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	border: 0.5px solid black;
+	padding: 1.5px;
+}
+
+.links_navbar {
+	font-family: Century Gothic;
+}
+
+
+
+
+@media (max-width: 600px) {
+
+	#imgfooter{
+		display: block;
+		float: none;
+		max-width: 50px;
+		margin-left: auto;
+		margin-right: auto;
+	} 
+
