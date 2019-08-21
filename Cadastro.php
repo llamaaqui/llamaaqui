@@ -1,9 +1,17 @@
+<?php
+
+require_once "backend/cadastro_backend.php";
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Cadastro</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css_e_js/modelo.css">
+	<link rel="stylesheet" type="text/css" href="css_e_js/cadastro.css">
+	<link rel="stylesheet" type="text/css" href="css_e_js/padrao.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
@@ -16,15 +24,15 @@
 
 			<h1 id="titulo_cadastro">Criar uma conta</h1>
 			
-			<input class="input_form" type="text" name="nome" id="nome" required="" placeholder="Nome">
+			<input class="input_form" type="text" name="nome" id="nome" required="" placeholder="Nome" value="<?=$nome?>">
 
 			<br><br>
 
-			<input class="input_form" type="email" name="email" id="email" required="" placeholder="E-mail">
+			<input class="input_form" type="email" name="email" id="email" required="" placeholder="E-mail" value="<?=$email?>">
 
 			<br><br>
 
-			<input class="input_form" type="password" name="senha" id="senha" required="" placeholder="Senha">
+			<input class="input_form" type="password" name="senha" id="senha" required="" placeholder="Senha" value="<?=$senha?>">
 
 			<br><br>
 
@@ -36,11 +44,11 @@
 
 			<div style="text-align: center">
 				<div class="custom-control custom-radio custom-control-inline">
-					<input type="radio" id="masculino" name="sexo" class="custom-control-input" required="">
+					<input type="radio" id="masculino" name="sexo" class="custom-control-input" value="Masculino" required="" <?php if ($_POST['sexo'] == "Masculino" and isset($_POST['sexo'])) {echo "checked=''";}?>>
 					<label class="custom-control-label" for="masculino">Masculino</label>
 				</div>
 				<div class="custom-control custom-radio custom-control-inline">
-					<input type="radio" id="feminino" name="sexo" class="custom-control-input">
+					<input type="radio" id="feminino" name="sexo" class="custom-control-input" value="Feminino" <?php if ($_POST['sexo'] == "Feminino" and isset($_POST['sexo'])) {echo "checked=''";}?>>
 					<label class="custom-control-label" for="feminino">Feminino</label>
 				</div>
 			</div>
@@ -48,9 +56,10 @@
 			<br>
 
 
-			<select class="select" required="">
+			<select name="dia" class="select" required="">
 
-				<option>Dia</option>
+				<option><?php if (isset($_POST['dia'])) { echo $_POST['dia'];} else { echo 'Dia';}?></option>
+
 				<?php for ($i = 1; $i <= 31; $i++) {?>
 				<option><?=$i?></option>
 				<?php } ?>
@@ -58,26 +67,26 @@
 			</select>
 
 
-			<select class="select" required="">
-				<option>Mês</option>
-				<option>Janeiro</option>
-				<option>Fevereiro</option>
-				<option>Março</option>
-				<option>Abril</option>
-				<option>Maio</option>
-				<option>Junho</option>
-				<option>Julho</option>
-				<option>Agosto</option>
-				<option>Setembro</option>
-				<option>Outubro</option>
-				<option>Novembro</option>
-				<option>Dezembro</option>
+			<select name="mes" class="select" required="">
+				<option><?php if (isset($_POST['mes'])) { echo $_POST['mes'];} else { echo 'Mês';}?></option>
+				<option>01</option>
+				<option>02</option>
+				<option>03</option>
+				<option>04</option>
+				<option>05</option>
+				<option>06</option>
+				<option>07</option>
+				<option>08</option>
+				<option>09</option>
+				<option>10</option>
+				<option>11</option>
+				<option>12</option>
 			</select>
 
 
-			<select class="select" required="">
+			<select name="ano" class="select" required="">
 
-				<option>Ano</option>
+				<option><?php if (isset($_POST['ano'])) { echo $_POST['ano'];} else { echo 'Ano';}?></option>
 				<?php for ($i = date('Y'); $i >= (date('Y') - 100); $i--) {?>
 				<option><?=$i?></option>
 				<?php } ?>
@@ -86,14 +95,14 @@
 
 			<br><br>
 
-			<input class="input_form" type="number" name="telefone" id="telefone" placeholder="Número de Telefone">
+			<input class="input_form" type="number" name="telefone" id="telefone" placeholder="Número de Telefone" value="<?=$telefone?>">
 
 			<br><br>
 
-			<input class="input_form" type="number" name="celular" id="celular" placeholder="Número de celular">
+			<input class="input_form" type="number" name="celular" id="celular" placeholder="Número de celular" value="<?=$celular?>">
 
 
-			<button class="btn btn-success btn-block mt-5" type="submit">Enviar</button>
+			<button class="btn btn-success btn-block mt-5" name="cadastrar" type="submit">Enviar</button>
 
 		</form>
 	</div>

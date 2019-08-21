@@ -26,7 +26,7 @@
 
 		</div>
 
-		<div class="col-12 m-5">
+		<div class="col-12 mt-5">
 			<a href="" class="text-dark m-3">Temos e condições</a>
 			<a href="" class="text-dark m-3">Politica de privacidade</a>
 		</div>
