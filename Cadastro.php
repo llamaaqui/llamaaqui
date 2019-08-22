@@ -1,6 +1,9 @@
 <?php
 
-require_once "backend/cadastro_backend.php";
+require_once "classes/cadastro_backend.php";
+
+$Executar_cadastro = new Cadastro();
+$Executar_cadastro->cadastrar();
 
 ?>
 
@@ -24,15 +27,15 @@ require_once "backend/cadastro_backend.php";
 
 			<h1 id="titulo_cadastro">Criar uma conta</h1>
 			
-			<input class="input_form" type="text" name="nome" id="nome" required="" placeholder="Nome" value="<?=$nome?>">
+			<input class="input_form" type="text" name="nome" id="nome" required="" placeholder="Nome" value="<?=$Executar_cadastro->nome?>">
 
 			<br><br>
 
-			<input class="input_form" type="email" name="email" id="email" required="" placeholder="E-mail" value="<?=$email?>">
+			<input class="input_form" type="email" name="email" id="email" required="" placeholder="E-mail" value="<?=$Executar_cadastro->email?>">
 
 			<br><br>
 
-			<input class="input_form" type="password" name="senha" id="senha" required="" placeholder="Senha" value="<?=$senha?>">
+			<input class="input_form" type="password" name="senha" id="senha" required="" placeholder="Senha" value="<?=$Executar_cadastro->senha?>">
 
 			<br><br>
 
@@ -44,11 +47,11 @@ require_once "backend/cadastro_backend.php";
 
 			<div style="text-align: center">
 				<div class="custom-control custom-radio custom-control-inline">
-					<input type="radio" id="masculino" name="sexo" class="custom-control-input" value="Masculino" required="" <?php if ($_POST['sexo'] == "Masculino" and isset($_POST['sexo'])) {echo "checked=''";}?>>
+					<input type="radio" id="masculino" name="sexo" class="custom-control-input" value="Masculino" required="" <?php if (isset($_POST['sexo']) and ($_POST['sexo'] == "Masculino")) {echo "checked=''";}?>>
 					<label class="custom-control-label" for="masculino">Masculino</label>
 				</div>
 				<div class="custom-control custom-radio custom-control-inline">
-					<input type="radio" id="feminino" name="sexo" class="custom-control-input" value="Feminino" <?php if ($_POST['sexo'] == "Feminino" and isset($_POST['sexo'])) {echo "checked=''";}?>>
+					<input type="radio" id="feminino" name="sexo" class="custom-control-input" value="Feminino" <?php if (isset($_POST['sexo']) and $_POST['sexo'] == "Feminino") {echo "checked=''";}?>>
 					<label class="custom-control-label" for="feminino">Feminino</label>
 				</div>
 			</div>
@@ -58,7 +61,7 @@ require_once "backend/cadastro_backend.php";
 
 			<select name="dia" class="select" required="">
 
-				<option><?php if (isset($_POST['dia'])) { echo $_POST['dia'];} else { echo 'Dia';}?></option>
+				<option value="<?php if (isset($_POST['dia'])) { echo $_POST['dia'];} else { echo '';}?>"><?php if (isset($_POST['dia'])) { echo $_POST['dia'];} else { echo 'Dia';}?></option>
 
 				<?php for ($i = 1; $i <= 31; $i++) {?>
 				<option><?=$i?></option>
@@ -68,7 +71,7 @@ require_once "backend/cadastro_backend.php";
 
 
 			<select name="mes" class="select" required="">
-				<option><?php if (isset($_POST['mes'])) { echo $_POST['mes'];} else { echo 'Mês';}?></option>
+				<option value="<?php if (isset($_POST['mes'])) { echo $_POST['mes'];} else { echo '';}?>"><?php if (isset($_POST['mes'])) { echo $_POST['mes'];} else { echo 'Mês';}?></option>
 				<option>01</option>
 				<option>02</option>
 				<option>03</option>
@@ -86,7 +89,7 @@ require_once "backend/cadastro_backend.php";
 
 			<select name="ano" class="select" required="">
 
-				<option><?php if (isset($_POST['ano'])) { echo $_POST['ano'];} else { echo 'Ano';}?></option>
+				<option value="<?php if (isset($_POST['ano'])) { echo $_POST['ano'];} else { echo '';}?>"><?php if (isset($_POST['ano'])) { echo $_POST['ano'];} else { echo 'Ano';}?></option>
 				<?php for ($i = date('Y'); $i >= (date('Y') - 100); $i--) {?>
 				<option><?=$i?></option>
 				<?php } ?>
@@ -95,11 +98,11 @@ require_once "backend/cadastro_backend.php";
 
 			<br><br>
 
-			<input class="input_form" type="number" name="telefone" id="telefone" placeholder="Número de Telefone" value="<?=$telefone?>">
+			<input class="input_form" type="number" name="telefone" id="telefone" placeholder="Número de Telefone" value="<?=$Executar_cadastro->telefone?>">
 
 			<br><br>
 
-			<input class="input_form" type="number" name="celular" id="celular" placeholder="Número de Celular" value="<?=$celular?>">
+			<input class="input_form" type="number" name="celular" id="celular" placeholder="Número de celular" value="<?=$Executar_cadastro->celular?>">
 
 
 			<button class="btn btn-success btn-block mt-5" name="cadastrar" type="submit">Enviar</button>
