@@ -99,7 +99,7 @@ require_once "backend/cadastro_backend.php";
 
 			<br><br>
 
-			<input class="input_form" type="number" name="celular" id="celular" placeholder="Número de celular" value="<?=$celular?>">
+			<input class="input_form" type="number" name="celular" id="celular" placeholder="Número de Celular" value="<?=$celular?>">
 
 
 			<button class="btn btn-success btn-block mt-5" name="cadastrar" type="submit">Enviar</button>
