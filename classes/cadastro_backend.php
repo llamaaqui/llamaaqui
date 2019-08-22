@@ -61,6 +61,9 @@ class Cadastro extends Site {
 
 					$_SESSION['nome'] = $this->nome;
 					$_SESSION['email'] = $this->email;
+					$_SESSION['login'] = 1;
+
+					header("location: modelo.php");
 
 				}
 
