@@ -4,6 +4,8 @@ error_reporting(0);
 
 require_once "includes/conexao.php";
 
+
+// Puxando os POSTS e transformando em variáveis
 $nome = $_POST['nome'];
 $email = $_POST['email'];
 $senha = $_POST['senha'];
@@ -14,14 +16,18 @@ $telefone = $_POST['telefone'];
 $celular = $_POST['celular'];
 
 
-// Verificando o click no botão
+
+// Verificando o click no botão de cadastro
 
 if (isset($_POST['cadastrar'])) {
 
+	if ($telefone == "") {$telefone = "DEFAULT";};
+	if ($celular == "") {$celular = "DEFAULT";};
 
+	
 	if ($senha == $senha2) {
 
-		$sql_cadastro = "INSERT INTO dados_usuario (Nome, Email, Senha, Sexo, Data_nascimento, Telefone, Celular) values ('$nome', '$email', '$senha', '$sexo', '$data_nascimento', '$telefone', '$celular');";
+		$sql_cadastro = "INSERT INTO dados_usuario (Nome, Email, Senha, Sexo, Data_nascimento, Telefone, Celular) values ('$nome', '$email', '$senha', '$sexo', '$data_nascimento', $telefone, $celular);";
 
 		if (mysqli_query($con, $sql_cadastro)) {
 
