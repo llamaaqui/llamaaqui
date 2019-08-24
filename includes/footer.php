@@ -17,12 +17,12 @@
 
 		<div class="col-12 float-left text-center bg-light m-3">
 
-			<a href=""><img src="img/email.png" id="imgfooter"></a>
-			<a href="" ><img src="img/facebool.png" id="imgfooter" class=""></a>
-			<a href=""><img src="img/instragan.png" id="imgfooter"></a>
-			<a href=""><img src="img/telefone.png" id="imgfooter"></a>
-			<a href=""><img src="img/twiter.png" id="imgfooter"></a>
-			<a href=""><img src="img/whatsapp.png" id="imgfooter"></a>
+			<a href=""><img src="img/email.png" class="imgfooter"></a>
+			<a href="" ><img src="img/facebool.png" class="imgfooter"></a>
+			<a href=""><img src="img/instragan.png" class="imgfooter"></a>
+			<a href=""><img src="img/telefone.png" class="imgfooter"></a>
+			<a href=""><img src="img/twiter.png" class="imgfooter"></a>
+			<a href=""><img src="img/whatsapp.png" class="imgfooter"></a>
 
 		</div>
 

@@ -14,6 +14,8 @@ $Executar_cadastro->cadastrar();
 	<title>Cadastro</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css_e_js/cadastro.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.js">
 	<link rel="stylesheet" type="text/css" href="css_e_js/padrao.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
@@ -22,24 +24,24 @@ $Executar_cadastro->cadastrar();
 	<?php require_once "includes/navbar.php"; ?>
 
 
-	<div class="formulario_cadastro">
+	<div class="forms">
 		<form class="form-group" method="post">
 
-			<h1 id="titulo_cadastro">Criar uma conta</h1>
+			<h1 class="titulo_padrao">Crie uma conta</h1>
 			
-			<input class="input_form" type="text" name="nome" id="nome" required="" placeholder="Nome" value="<?=$Executar_cadastro->nome?>">
+			<input class="inputs" type="text" name="nome" id="nome" required="" placeholder="Nome" value="<?=$Executar_cadastro->nome?>">
 
 			<br><br>
 
-			<input class="input_form" type="email" name="email" id="email" required="" placeholder="E-mail" value="<?=$Executar_cadastro->email?>">
+			<input class="inputs" type="email" name="email" id="email" required="" placeholder="E-mail" value="<?=$Executar_cadastro->email?>">
 
 			<br><br>
 
-			<input class="input_form" type="password" name="senha" id="senha" required="" placeholder="Senha" value="<?=$Executar_cadastro->senha?>">
+			<input class="inputs" type="password" name="senha" id="senha" required="" placeholder="Senha" value="<?=$Executar_cadastro->senha?>">
 
 			<br><br>
 
-			<input class="input_form" type="password" name="senha2" id="senha2" required="" placeholder="Repetir a senha">
+			<input class="inputs" type="password" name="senha2" id="senha2" required="" placeholder="Repetir a senha">
 
 			<br><br>
 
@@ -47,11 +49,11 @@ $Executar_cadastro->cadastrar();
 
 			<div style="text-align: center">
 				<div class="custom-control custom-radio custom-control-inline">
-					<input type="radio" id="masculino" name="sexo" class="custom-control-input" value="Masculino" required="" <?php if (isset($_POST['sexo']) and ($_POST['sexo'] == "Masculino")) {echo "checked=''";}?>>
+					<input type="radio" id="masculino" name="sexo" class="custom-control-input radio" value="Masculino" required="" <?php if (isset($_POST['sexo']) and ($_POST['sexo'] == "Masculino")) {echo "checked=''";}?>>
 					<label class="custom-control-label" for="masculino">Masculino</label>
 				</div>
 				<div class="custom-control custom-radio custom-control-inline">
-					<input type="radio" id="feminino" name="sexo" class="custom-control-input" value="Feminino" <?php if (isset($_POST['sexo']) and $_POST['sexo'] == "Feminino") {echo "checked=''";}?>>
+					<input type="radio" id="feminino" name="sexo" class="custom-control-input radio" value="Feminino" <?php if (isset($_POST['sexo']) and $_POST['sexo'] == "Feminino") {echo "checked=''";}?>>
 					<label class="custom-control-label" for="feminino">Feminino</label>
 				</div>
 			</div>
@@ -98,14 +100,14 @@ $Executar_cadastro->cadastrar();
 
 			<br><br>
 
-			<input class="input_form" type="number" name="telefone" id="telefone" placeholder="Número de Telefone" value="<?=$Executar_cadastro->telefone?>">
+			<input class="inputs" type="number" name="telefone" id="telefone" placeholder="Número de Telefone" value="<?=$Executar_cadastro->telefone?>">
 
 			<br><br>
 
-			<input class="input_form" type="number" name="celular" id="celular" placeholder="Número de celular" value="<?=$Executar_cadastro->celular?>">
+			<input class="inputs" type="number" name="celular" id="celular" placeholder="Número de celular" value="<?=$Executar_cadastro->celular?>">
 
 
-			<button class="btn btn-success btn-block mt-5" name="cadastrar" type="submit">Enviar</button>
+			<button class="btn btn-success btn-block mt-5 btn_padrao" name="cadastrar" type="submit">Enviar</button>
 
 		</form>
 	</div>

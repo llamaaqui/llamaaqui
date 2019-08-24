@@ -1,55 +1,16 @@
-#titulo_cadastro {
-	text-align: center;
-	margin-bottom: 50px;
-	color: #FF8D3F;
-}
-
 .p_cadastro {
 	margin: 0 0 15px 0 !important;
 	text-align: center;
 	font-weight: 900;
-	color: #FF8D3F;
-}
-
-.btn {
-	background-color: #FF8D3F !important;
-	border: 3px solid #B97A57 !important;
-	color: white !important;
-	font-weight: 800 !important;
-}
-
-.formulario_cadastro {
-	margin: 60px auto 60px auto;
-	width: 400px;
-	background-color: white;
-	padding: 30px;
-	border: 3px solid #B97A57;
-	border-radius: 15px;
-}
-
-.input_form {
-	margin-bottom: 10px;
-	width: 95%;
-	height: 40px !important;
-	outline: none;
-	border-radius: 5px;
-	border: 2px solid #B97A57 !important;
-	padding: 10px !important;
-	font-weight: 900;
-
-}
-
-label {
-	font-weight: 900;
-	color: #FF8D3F;
+	color: #d05b4f;
 }
 
 .select {
 	margin-top: 10px;
 	margin-bottom: 10px;
 	border-radius: 5px;
-	border: 2px solid #B97A57 !important;
+	border: 2px solid #a5404d !important;
 	padding: 1.5px;
-	width: 30%;
+	width: 32%;
 	outline: none;
 }

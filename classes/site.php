@@ -3,7 +3,7 @@
 
 class Site {
 
-	CONST HOST = "127.0.0.1:3307";
+	CONST HOST = "127.0.0.1";
 	CONST USER = "root";
 	CONST PASS = "";
 	CONST DB   = "base_llama";
@@ -26,7 +26,7 @@ class Site {
 		$this->con = mysqli_connect(self::HOST, self::USER, self::PASS, self::DB);
 
 
-		if (!$this->con) {die("Não foi");}
+		if (!$this->con) {die("Não foi -> ".mysqli_connect_error());}
 
 	}
 
