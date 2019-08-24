@@ -11,6 +11,8 @@
     body {
     	font-family: Century Gothic !important;
     	background-color: #2F0D33 !important;
+      margin: none;
+      padding: none;
     }
 
     .titulo_padrao {
@@ -26,7 +28,7 @@
 
     .forms {
     	margin: 60px auto 60px auto;
-    	width: 400px;
+    	width: 440px;
     	background-color: white;
     	padding: 30px;
     	border: 3px solid #a5404d;
@@ -48,7 +50,6 @@
     	border: 2px solid #a5404d !important;
     	padding: 10px !important;
     	font-weight: 900;
-
     }
 
     .btn_padrao {
@@ -61,41 +62,47 @@
     a:link {
     	font-weight: 900;
     	color: #d05b4f;
+      text-decoration: none;
     }
 
     a:hover {
     	font-weight: 900;
-    	color: green;    }
+    	color: #d05b4f;
+      text-decoration: none;
+    }
 
-    	a:visited {
-    		font-weight: 900;
-    		color: #d05b4f;
-    	}
+    a:visited {
+      font-weight: 900;
+      color: #d05b4f;
+      text-decoration: none;
+    }
 
-    	footer {
-    		font-weight: bold;
-    	}
+    footer {
+      width: 100%;
+      font-weight: bold;
+      position: absolute;
+    }
 
-    	.imgfooter {
-    		width: 54px;
-    		margin-left: 50px;
-    		margin-top: 10px;
-    		/*background-color: white;*/
-    		padding: 10px;
-    	}
+    .imgfooter {
+      width: 54px;
+      margin-left: 50px;
+      margin-top: 10px;
+      /*background-color: white;*/
+      padding: 10px;
+    }
 
 
 
 
-    	@media (max-width: 768px) {
+    @media (max-width: 768px) {
 
-    		.imgfooter{
-    			display: block;
-    			float: none;
-    			max-width: 50px;
-    			margin-left: auto;
-    			margin-right: auto;
-    		} 
+      .imgfooter{
+       display: block;
+       float: none;
+       max-width: 50px;
+       margin-left: auto;
+       margin-right: auto;
+     } 
 
-    	}
+   }
 

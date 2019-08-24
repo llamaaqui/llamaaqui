@@ -1,3 +1,12 @@
+<?php 
+
+require_once "classes/cadastro_&_login.php";
+
+$Executar_login = new Cadastro_login();
+$Executar_login->logar();
+
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,9 +19,9 @@
 
 	<?php require_once "includes/navbar.php"; ?>
 
-	<form  class="forms">
+	<form  class="forms" method="post">
 
-			<h1 class="titulo_padrao">Conecte-se</h1>
+		<h1 class="titulo_padrao">Conecte-se</h1>
 
 		<div>
 			<div class="form-group " >
@@ -24,10 +33,10 @@
 				<input class="inputs" type="password" name="senha" class="form-control" id="senha" placeholder="Digite sua senha">
 			</div>
 
-			<button type="submit" class="btn btn-block btn_padrao mt-4">logar</button>
-			<div class="dropdown-divider pb-3"></div>
+			<button type="submit" name="logar" class="btn btn-block btn_padrao mt-5">Entrar</button>
+			<br><hr><br>
 			<a class="" href="#">Esqueci minha senha.</a><br>
-			<a class="" href="#">Quero me cadastrar.</a>
+			<a class="" href="Cadastro.php">Quero me cadastrar.</a>
 		</div>
 
 	</form>
