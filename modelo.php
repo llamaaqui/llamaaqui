@@ -1,3 +1,13 @@
+<?php
+
+require_once "classes/site.php";
+
+$teste = new Site();
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
