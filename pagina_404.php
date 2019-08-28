@@ -8,7 +8,12 @@
 </head>
 <body>
 
-	<?php require_once "includes/navbar.php"; ?>
+	<?php 
+
+	require_once "includes/lhama.php"; 
+	require_once "includes/navbar.php"; 
+
+	?>
 
 	<div id="e404">
 		<div class="col-md-6 col-12 mt-5" style="float: left;">
