@@ -1,6 +1,6 @@
 <?php 
 
-require_once "classes/cadastro_&_login.php";
+require_once "classes/cadastro_login.php";
 
 $Executar_login = new Cadastro_login();
 $Executar_login->logar();
@@ -33,8 +33,8 @@ $Executar_login->logar();
 				<input class="inputs" type="password" name="senha" class="form-control" id="senha" placeholder="Digite sua senha">
 			</div>
 
-			<button type="submit" name="logar" class="btn btn-block btn_padrao mt-5">Entrar</button>
-			<br><hr><br>
+			<button type="submit" name="logar" class="btn btn-block btn_padrao mt-4">Entrar</button>
+			<hr>
 			<a class="" href="#">Esqueci minha senha.</a><br>
 			<a class="" href="Cadastro.php">Quero me cadastrar.</a>
 		</div>

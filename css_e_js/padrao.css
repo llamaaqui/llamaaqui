@@ -80,7 +80,6 @@
     footer {
       width: 100%;
       font-weight: bold;
-      position: absolute;
     }
 
     .imgfooter {
@@ -91,18 +90,32 @@
       padding: 10px;
     }
 
-
+    #e404 {
+      margin: 80px auto 80px auto;
+      width: 700px;
+      height: 410px;
+      background-color: white;
+      padding: 30px;
+      border: 3px solid #a5404d;
+      border-radius: 15px;
+      text-align: center;
+    }
 
 
     @media (max-width: 768px) {
 
       .imgfooter{
-       display: block;
-       float: none;
-       max-width: 50px;
-       margin-left: auto;
-       margin-right: auto;
+       display: block !important;
+       float: none !important;
+       max-width: 50px !important;
+       margin-left: auto !important;
+       margin-right: auto !important;
      } 
+
+     #e404 {
+      width: 450px !important;
+      height: 350px !important;
+     }
 
    }
 

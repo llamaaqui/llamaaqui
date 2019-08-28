@@ -1,6 +1,6 @@
 <?php
 
-require_once "classes/cadastro_&_login.php";
+require_once "classes/cadastro_login.php";
 
 $Executar_cadastro = new Cadastro_login();
 $Executar_cadastro->cadastrar();

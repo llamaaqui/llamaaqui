@@ -1,6 +1,6 @@
 <div class="container-fluid bg-light">
 	<div class="container">
-		<nav id="fundo-nav" class="navbar navbar-expand-lg navbar-light text-dark">
+		<nav id="fundo-nav" class="navbar navbar-expand-md navbar-light text-dark">
 
 			<a class="navbar-brand" href="#">
 				<img src="img/Lllama.png" width="30" height="30" alt="Llama Aqui">
