@@ -17,7 +17,12 @@ $Executar_login->logar();
 </head>
 <body>
 
-	<?php require_once "includes/navbar.php"; ?>
+	<?php 
+
+	require_once "includes/lhama.php"; 
+	require_once "includes/navbar.php"; 
+
+	?>
 
 	<form  class="forms" method="post">
 
