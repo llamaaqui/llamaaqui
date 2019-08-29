@@ -37,18 +37,18 @@ class Site {
 		$this->url = $_SERVER["REQUEST_URI"];
 
 
-		if (!isset($_SESSION['logado']) || $_SESSION['logado'] <> true) {
+		//if (!isset($_SESSION['logado']) || $_SESSION['logado'] <> true) {
 
-			if ($this->url == "/matutino/GitHub/llamaaqui/Login.php" || $this->url == "/matutino/GitHub/llamaaqui/Cadastro.php" || $this->url == "/matutino/GitHub/llamaaqui/pagina_404.php") {
+			//if ($this->url == "/matutino/GitHub/llamaaqui/Login.php" || $this->url == "/matutino/GitHub/llamaaqui/Cadastro.php" || $this->url == "/matutino/GitHub/llamaaqui/pagina_404.php") {
 
-			} else {
+			//} else {
 
-				$_SESSION['logado'] = false;
-				header("Location: pagina_404.php");
+			//	$_SESSION['logado'] = false;
+			//	header("Location: pagina_404.php");
 
-			}
+			//}
 
-		}
+		//}
 
 	}
 
